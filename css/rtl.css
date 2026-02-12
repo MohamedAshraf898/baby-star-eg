@@ -1,0 +1,110 @@
+/* RTL Support */
+[dir="rtl"] body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Cairo', sans-serif;
+    /* Example Arabic font, add to head if needed */
+}
+
+/* Float Helpers */
+[dir="rtl"] .pull-left {
+    float: right !important;
+}
+
+[dir="rtl"] .pull-right {
+    float: left !important;
+}
+
+[dir="rtl"] .float-left {
+    float: right !important;
+}
+
+[dir="rtl"] .float-right {
+    float: left !important;
+}
+
+/* Margins and Paddings mirror */
+[dir="rtl"] .ml-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .mr-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+/* Header & Navigation */
+[dir="rtl"] .main-header .info-box li {
+    float: right;
+}
+
+[dir="rtl"] .main-header .info-box li:last-child {
+    float: left;
+}
+
+[dir="rtl"] .main-menu .navigation>li {
+    float: right;
+}
+
+[dir="rtl"] .main-menu .navigation>li>ul {
+    left: auto;
+    right: 0;
+    text-align: right;
+}
+
+/* Text Alignments */
+[dir="rtl"] .text-left {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-right {
+    text-align: left !important;
+}
+
+/* Icons and spacing */
+[dir="rtl"] .theme-btn i {
+    margin-left: 0;
+    margin-right: 3px;
+}
+
+[dir="rtl"] .list-style-one li,
+[dir="rtl"] .list-style-two li {
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+[dir="rtl"] .list-style-one li:before,
+[dir="rtl"] .list-style-two li:before {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .social-icon-one li {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* Form inputs */
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+    text-align: right;
+}
+
+/* Specific Component Fixes */
+/* Example: if arrows need flipping */
+[dir="rtl"] .icon-arrow-left:before {
+    content: "\e902";
+    /* Replace with right arrow code if needed */
+}
+
+[dir="rtl"] .owl-carousel {
+    direction: ltr;
+    /* Owl Carousel often needs LTR container, but items RTL */
+}
+
+[dir="rtl"] .owl-carousel .owl-item {
+    direction: rtl;
+    float: right;
+}
