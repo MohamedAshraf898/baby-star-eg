@@ -4,7 +4,7 @@ window.setLanguage = function (lang) {
         console.error('Translations not found for:', lang);
         return;
     }
-
+    //hi
     localStorage.setItem('baby_star_lang', lang);
     document.documentElement.lang = lang;
 
@@ -52,7 +52,8 @@ window.toggleLanguage = function () {
     const currentLang = localStorage.getItem('baby_star_lang') || 'en';
     const newLang = currentLang === 'en' ? 'ar' : 'en';
     console.log('Toggling language from', currentLang, 'to', newLang);
-    window.setLanguage(newLang);
+    localStorage.setItem('baby_star_lang', newLang);
+    location.reload();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
